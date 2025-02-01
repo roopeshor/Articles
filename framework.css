@@ -1,0 +1,64 @@
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+	position: relative;
+	height: 250px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 20px;
+}
+
+header > h1 {
+	position: absolute;
+	bottom: 0;
+	font-size: 29px;
+	word-wrap: break-word;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+article {
+	padding: 10px;
+}
+
+footer {
+	background-color: #000;
+	min-height: 200px;
+	text-align: center;
+	padding: 10px;
+	color: #fff;
+}
+
+.media_icon {
+	max-width: 50px;
+	max-height: 50px;
+}
+.media_icon svg{
+	position: relative;
+	width: 40px;
+	height: 40px;
+	/* background-color: #fff; */
+}
+svg::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	bottom: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;	
+}
+
+/**/
+
+span[special] {
+	color: rgb(45, 178, 17);
+}
