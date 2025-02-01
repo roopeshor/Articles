@@ -11,18 +11,18 @@ head, body {
 header {
   position: relative;
   height: 150px;
-  background-image: url("./Test-article/Untitled.jpg");
+  background-image: url("./bg.jpg");
   background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
   color: #fff;
-  text-align: center;
+	display: flex;
+	text-align: center;
+	align-items: center;
 }
 
 header > h1 {
 	position: absolute;
-	bottom: 0;
-	font-size: 29px;
 	word-wrap: break-word;
   width: 100%;
   margin-left: 0;
@@ -32,6 +32,9 @@ header > h1 {
 article {
   padding: 20px;
   height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 }
 
 .article {
@@ -51,7 +54,7 @@ article > a {
 }
 
 .article_descriptor {
-  padding-left: 15px;
+  padding: 15px;
 }
 .article_descriptor h2 {
   margin: 0;
@@ -60,4 +63,34 @@ article > a {
 .article_descriptor p {
   font-size: 14px;
   margin-top: 10px;
+}
+
+footer {
+	position: absolute;
+	width: 100%;
+	background-color: #000;
+	text-align: center;
+	padding: 5px 10px 10px 10px;
+	color: #fff;
+	left: 0;
+	bottom: 0;
+}
+
+.media_icon {
+	max-width: 50px;
+	max-height: 50px;
+}
+.media_icon svg{
+	position: relative;
+	width: 40px;
+	height: 40px;
+}
+svg::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	bottom: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;	
 }
