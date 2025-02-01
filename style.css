@@ -45,6 +45,10 @@ article {
   width: 110px;
   height: 110px;
 }
+article > a {
+	text-decoration: none;
+	color: unset;
+}
 
 .article_descriptor {
   padding-left: 15px;

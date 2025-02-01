@@ -11,26 +11,45 @@
 
 <body>
 	<header>
-		<h1>Some great things are <span special>one step away</span> </h1>
+		<h1>Setting Up <span special>MASM</span></h1>
+		<i>last updated: Nov-4 2024 : 8:6pm</i>
 	</header>
 	<article>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores minima
-			id quos ad ex rem eius animi corporis autem quisquam blanditiis aperiam
-			vitae accusamus vero, dolorem perferendis. Voluptatem, soluta
-			necessitatibus?
-		</p>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsum
-			minima expedita quibusdam quas, tenetur libero ex tempore odio cum fuga
-			Dolores minima id quos ad ex rem eius animi corporis autem quisquam blanditiis
-		</p>
-		<p>
-		  Dolores minima id quos ad ex rem eius animi corporis autem quisquam blanditiis
-		  
-		</p>
+		<h2>Setup MASM on Windows</h2>
+		This should work on both windows 11 & 10. Here, I'm downloading MASM compiler and extracting it to root of <pre>C:</pre> drive. This compiler, used here is made for older x86 processors. Hence you can run MASM only inside DOSBox
+		<h3>Steps</h3>
+		<ol>
+			<li><b class="emph">Install DOSBox: </b><a href="https://sourceforge.net/projects/dosbox/files/latest/download">https://sourceforge.net/projects/dosbox/files/latest/download</a></li>
+			<li><b class="emph">Install MASM:</b> There are many variants available, you can use whatever you found. Here I'm using MASM611 obtained from a random GitHub page: <a href="https://codeload.github.com/POCU/MASM611/zip/refs/heads/main">https://codeload.github.com/POCU/MASM611/zip/refs/heads/main</a></li>
+			<li><b class="emph">Goto Downloads, and extract downloaded MASM zip file to <pre>C:</pre> drive</b></li>
+			<img src="./images/1.png"/>
+			<img src="./images/2.png"/>
+			<li><b class="emph">Goto the extracted folder (in this case <pre>C:\MASM611-main</pre>) and cut and paste <pre>MASM611</pre> folder to <pre>C:</pre>. This makes mounting the folder to DOSBox easier</b></li>
+			<img src="./images/3.png"/>
+			<img src="./images/4.png"/>
+			<li><b class="emph">write a assmebly file:</b> open notepad and create a MASM code, and save the file it in <pre>C:\MASM611\BIN</pre> . (also add <pre>.asm</pre> extension  at the end of file)</li>
+			<img src="./images/5.png"/>
+			
+			<li><b class="emph">Open DOSBox:</b></li>
+			<img src="./images/6.png"/>
+			<li><b class="emph">Mount <pre>C:\MASM611\BIN</pre> in DOSBox as a drive</b>. DOSBox is a emulator, to load a file in it, you've to <i>mount</i> the folder (which the file contains) to DOSBox as a drive: <br><br>
+				To do so, type following command in DOSBox: <br>
+				<pre>mount D C:\MASM611\BIN</pre><br>
+				This will mount <pre>C:\MASM611\BIN</pre> to <pre>D:</pre> drive. <br><br>
+				Now change current drive to <pre>D</pre> drive by simply typing <pre>D:</pre> in DOSBox <br>
+				( <em><b>Note:</b> you can use any other letter to indicate drive</em> )
+			</li>
+			<img src="./images/7.png"/>
+			
+			<li><b class="emph">Compile the assmebly: </b><br>
+			Say you saved the assembly file as <pre>file.asm</pre> . To compile it, type: <br>
+			<pre>ml file.asm</pre> <br>
+			If no errors are found, execute the compiled binary by typing: <pre>file.exe</pre>
+			</li>
+			<img src="./images/8.png"/>
+		</ol>
 	</article>
-	<footer>
+	<!-- <footer>
 		<h2>Find me</h2>
 		<div class="media-options">
 			<a href="https://www.linkedin.com/in/roopesh-or" class="media_icon"><svg viewBox="0 0 24 24"><title>LinledIn</title><g><path d="M0 0h24v24H0z" fill="none" /><path style="transform: scale(0.8) translate(10%, 10%);" d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z" fill-rule="nonzero" fill="#fff" /></g></svg></a>
@@ -40,7 +59,7 @@
 			<a href="https://twitter.com/roopeshor" class="media_icon"><svg viewBox="0 0 56.693 56.693"><title>Twitter</title><path fill="#fff" d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454	c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303	c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412	c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91	c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019	c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541	c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z" /></svg></a>
 			<a href="https://www.sololearn.com/profile/11386139" class="media_icon"><svg viewBox="0 0 24 24" style="background-color: black;"><title>Sololearn</title><path fill="#fff" style="transform: scale(0.7) translate(20%, 20%);" d="M18.621 16.084a8.483 8.483 0 0 1-2.922 6.427c-.603.53-.19 1.522.613 1.442a9.039 9.039 0 0 0 1.587-.3 8.32 8.32 0 0 0 5.787-5.887 8.555 8.555 0 0 0-8.258-10.832 9.012 9.012 0 0 0-1.045.06c-.794.1-.995 1.161-.29 1.542 2.701 1.452 4.53 4.285 4.53 7.548zM7.906 18.597a8.538 8.538 0 0 1-6.45-2.913c-.532-.6-1.527-.19-1.446.61a8.943 8.943 0 0 0 .3 1.582c.794 2.823 3.064 5.026 5.907 5.766 5.727 1.492 10.87-2.773 10.87-8.229 0-.35-.02-.7-.06-1.04-.1-.792-1.165-.992-1.547-.29a8.597 8.597 0 0 1-7.574 4.514zM5.382 7.916a8.483 8.483 0 0 1 2.924-6.427c.603-.531.19-1.522-.613-1.442a9.93 9.93 0 0 0-1.598.29A8.339 8.339 0 0 0 .31 6.224a8.555 8.555 0 0 0 8.258 10.832c.352 0 .704-.02 1.045-.06.794-.1.995-1.162.29-1.542a8.54 8.541 0 0 1-4.52-7.538zm10.72-2.513a8.538 8.538 0 0 1 6.45 2.913c.53.6 1.526.19 1.445-.61a8.945 8.945 0 0 0-.3-1.583C22.902 3.3 20.632 1.098 17.788.357 12.071-1.145 6.928 3.12 6.928 8.576c0 .35.02.7.06 1.041.1.791 1.168.991 1.549.29A8.58 8.58 0 0 1 16.1 5.404z" /></svg></a>
 		</div>
-	</footer>
+	</footer> -->
 </body>
 
 </html>
