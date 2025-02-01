@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,39 +16,109 @@
 		<i>last updated: Nov-4 2024 : 9:00pm</i>
 	</header>
 	<article>
-		<h2>Setup MASM on Windows</h2>
-		This should work on both windows 11 & 10. Here, I'm downloading MASM compiler and extracting it to root of <pre>C:</pre> drive. This compiler, used here is made for older x86 processors. Hence you can run MASM only inside DOSBox
+		<h2 id="windows"><a href="#windows" class="no-color-link">Setup MASM on Windows</a></h2>
+		This should work on both windows 11 & 10. Here, I'm downloading MASM compiler and extracting it to root of
+		<pre>C:</pre> drive. This compiler, used here is made for older x86 processors. Hence you can run MASM only inside
+		DOSBox
 		<h3>Steps</h3>
 		<ol>
-			<li><b class="emph">Install DOSBox: </b><a href="https://sourceforge.net/projects/dosbox/files/latest/download">https://sourceforge.net/projects/dosbox/files/latest/download</a></li>
-			<li><b class="emph">Install MASM:</b> There are many variants available, you can use whatever you found. Here I'm using MASM611 obtained from a random GitHub page: <a href="https://codeload.github.com/POCU/MASM611/zip/refs/heads/main">https://codeload.github.com/POCU/MASM611/zip/refs/heads/main</a></li>
-			<li><b class="emph">Goto Downloads, and extract downloaded MASM zip file to <pre>C:</pre> drive</b></li>
-			<img src="./images/1.png"/>
-			<img src="./images/2.png"/>
-			<li><b class="emph">Goto the extracted folder (in this case <pre>C:\MASM611-main</pre>) and cut and paste <pre>MASM611</pre> folder to <pre>C:</pre>. This makes mounting the folder to DOSBox easier</b></li>
-			<img src="./images/3.png"/>
-			<img src="./images/4.png"/>
-			<li><b class="emph">write a assmebly file:</b> open notepad and create a MASM code, and save the file it in <pre>C:\MASM611\BIN</pre> . (also add <pre>.asm</pre> extension  at the end of file)</li>
-			<img src="./images/5.png"/>
-			
+			<li><b class="emph">Install DOSBox: </b><a
+					href="https://sourceforge.net/projects/dosbox/files/latest/download">https://sourceforge.net/projects/dosbox/files/latest/download</a>
+			</li>
+			<li><b class="emph">Install MASM:</b> There are many variants available, you can use whatever you found. Here I'm
+				using MASM611 obtained from a random GitHub page: <a
+					href="https://codeload.github.com/POCU/MASM611/zip/refs/heads/main">https://codeload.github.com/POCU/MASM611/zip/refs/heads/main</a>
+			</li>
+			<li><b class="emph">Goto Downloads, and extract downloaded MASM zip file to
+					<pre>C:</pre> drive
+				</b></li>
+			<img src="./images/1.png" />
+			<img src="./images/2.png" />
+			<li><b class="emph">Goto the extracted folder (in this case
+					<pre>C:\MASM611-main</pre>) and cut and paste
+					<pre>MASM611</pre> folder to
+					<pre>C:</pre>. This makes mounting the folder to DOSBox easier
+				</b></li>
+			<img src="./images/3.png" />
+			<img src="./images/4.png" />
+			<li><b class="emph">write a assmebly file:</b> open notepad and create a MASM code, and save the file it in
+				<pre>C:\MASM611\BIN</pre> . (also add
+				<pre>.asm</pre> extension at the end of file)
+			</li>
+			<img src="./images/5.png" />
+
 			<li><b class="emph">Open DOSBox:</b></li>
-			<img src="./images/6.png"/>
-			<li><b class="emph">Mount <pre>C:\MASM611\BIN</pre> in DOSBox as a drive</b>. DOSBox is a emulator, to load a file in it, you've to <i>mount</i> the folder (which the file contains) to DOSBox as a drive: <br><br>
+			<img src="./images/6.png" />
+			<li><b class="emph">Mount
+					<pre>C:\MASM611\BIN</pre> in DOSBox as a drive
+				</b>. DOSBox is a emulator, to load a file in it, you've to <i>mount</i> the folder (which the file contains) to
+				DOSBox as a drive: <br><br>
 				To do so, type following command in DOSBox: <br>
 				<pre>mount D C:\MASM611\BIN</pre><br>
-				This will mount <pre>C:\MASM611\BIN</pre> to <pre>D:</pre> drive. <br><br>
-				Now change current drive to <pre>D</pre> drive by simply typing <pre>D:</pre> in DOSBox <br>
+				This will mount
+				<pre>C:\MASM611\BIN</pre> to
+				<pre>D:</pre> drive. <br><br>
+				Now change current drive to
+				<pre>D</pre> drive by simply typing
+				<pre>D:</pre> in DOSBox <br>
 				( <em><b>Note:</b> you can use any other letter to indicate drive</em> )
 			</li>
-			<img src="./images/7.png"/>
-			
+			<img src="./images/7.png" />
+
 			<li><b class="emph">Compile the assmebly: </b><br>
-			Say you saved the assembly file as <pre>file.asm</pre> . To compile it, type: <br>
-			<pre>ml file.asm</pre> <br>
-			If no errors are found, execute the compiled binary by typing: <pre>file.exe</pre>
+				Say you saved the assembly file as
+				<pre>file.asm</pre> . To compile it, type: <br>
+				<pre>ml file.asm</pre> <br>
+				If no errors are found, execute the compiled binary by typing:
+				<pre>file.exe</pre>
 			</li>
-			<img src="./images/8.png"/>
+			<img src="./images/8.png" />
 		</ol>
+
+		<h2 id="linux">
+			<a href="#linux" class="no-color-link">On linux</a>
+		</h2>
+		<ol>
+			<li>Install MASM (probably from your distro's package manager): <br>
+				<ul>
+					<li>Debian based: <pre>&gt; sudo apt install dosbox</pre></li>
+					<li>Fedora: <pre>&gt; sudo dnf install dosbox</pre></li>
+				</ul>
+			</li>
+			<li>Download MASM to <pre>/opt</pre>,extract it..: <br>
+				<pre>curl -Lo /opt/masm.zip https://codeload.github.com/POCU/MASM611/zip/refs/heads/main && \
+unzip /opt/masm.zip -d /opt && \
+mv /opt/MASM611-main/MASM611 /opt && \
+rm /opt/MASM611-main /opt/masm.zip -rf</pre>
+		</li>
+		<li>Launch DOSBox.. and mount <pre>/opt/MASM611</pre> to DOSBox's filesystem:
+			<pre class="block-pad">&gt; mount D: /opt/MASM611/BIN
+> D:</pre><br>
+To assemble a file(say <pre>test.asm</pre>):
+<pre class="block-pad">&gt; ml test.asm</pre>
+Now you can execute the file by simply typing: <pre>file.exe</pre>
+		<img src="images/9.png" alt="">
+		</li>
+		</ol>
+
+		<h3 id="misc-tips1"><a href="#misc-tips1" class="no-color-link">Bonus</a>: automatically mount masm when opening dosbox</h3>
+		You can launch dosbox from terminal, and send it some initial command with <pre>-c</pre> flag: <br>
+		<pre>dosbox -c "mount C /opt/masm611/BIN" -c "C:"</pre>
+		<br>
+		So you can create a desktop shortcut that does the same. Here's one such desktop shortcut for KDE: <br>
+		<pre class="block-pad">
+[Desktop Entry]
+Type=Application
+Name=DOSBox with MASM
+Comment=DOSBox with MASM pre-mounted from /opt/MASM611/BIN
+Icon=dosbox
+Exec=dosbox -c "mount C /opt/MASM611/BIN" -c "C:"
+Terminal=false
+Categories=Game;Emulator;
+Keywords=DOS Emulator;</pre>
+<br>
+Save this in your desktop shortcuts folder: <pre>/home/username/.local/share/applications</pre> with some name, and now you can directly launch DOSBox ready to assemble masm files:
+<img src="images/10.png" alt="">
 	</article>
 	<!-- <footer>
 		<h2>Find me</h2>

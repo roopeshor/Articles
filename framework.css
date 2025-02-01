@@ -81,3 +81,18 @@ pre {
 span[special] {
 	color: rgb(45, 178, 17);
 }
+
+.no-color-link {
+	color: black;
+}
+.block-pad {
+	display: block;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+
+
+pre {
+	max-width: 100vw;
+	word-wrap: break-word;
+}
